@@ -1,0 +1,37 @@
+#include <iostream>
+using namespace std;
+int main()
+{
+	int x,y,amount,number;
+	
+	cout<<"Enter amount of items to be sorted: ";
+	cin>>amount;
+	
+	int array[amount];
+	
+	cout<<"\nEnter values:\n";
+	for(number=0;number<amount;number++)
+	{
+		cin>>array[number];
+	}
+	
+	for(number=0;number<amount;number++)
+	{
+		for(x=number;x<amount;x++)
+		{
+			if(array[number]>array[x])
+			{
+				y=array[number];
+				array[number]=array[x];
+				array[x]=y;
+			}
+		}
+	}
+	
+	cout<<"\nSorted in ascending order: ";
+	for(number=0;number<amount;number++)
+	{
+		cout<<array[number]<<" ";
+	}
+	return 0;
+}
