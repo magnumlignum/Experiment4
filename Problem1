@@ -51,14 +51,18 @@ int main()
 			cout<<"\nRemainder: "<< ans;
 		}
 		else
+		{
 			cout<<"\nInvalid input";
-			
+			return 0;
+		}
+		
 		cout<<"\n\nPress Y to continue. Else, press any other key to quit. ";
 		cin>>repeat;
 		
 		if(repeat!='y')
 		{
-			cout<<"End";
+			cout<<"\nEnd";
+			return 0;
 		}
 		else
 			confirm=1;
